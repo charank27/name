@@ -680,169 +680,96 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
-//header 
-//body 
-//footer 
-function Card() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        style: {
-            border: "2px solid green",
-            padding: "2px"
-        },
+var _dataJs = require("./components/data.js");
+var _dataJsDefault = parcelHelpers.interopDefault(_dataJs);
+var _cardJs = require("./components/card.js");
+var _cardJsDefault = parcelHelpers.interopDefault(_cardJs);
+var _headerJs = require("./components/header.js");
+var _headerJsDefault = parcelHelpers.interopDefault(_headerJs);
+var _footerJs = require("./components/footer.js");
+var _footerJsDefault = parcelHelpers.interopDefault(_footerJs);
+var _s = $RefreshSig$();
+//header
+//body
+//footer
+function App() {
+    _s();
+    const [cardData, setData] = (0, _react.useState)((0, _dataJsDefault.default));
+    function sortByPrice() {
+        cardData.sort((a, b)=>{
+            const priceA = parseInt(a.price.replace(/[₹,]/g, ""));
+            const priceB = parseInt(b.price.replace(/[₹,]/g, ""));
+            return priceA - priceB;
+        });
+        setData([
+            ...cardData
+        ]);
+    }
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: "https://www.pngkey.com/png/full/72-723644_blank-black-t-shirt-png.png",
-                height: "200px",
-                width: "calc(20% - 20px)"
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: (0, _headerJsDefault.default)({
+                    sortByPrice
+                })
             }, void 0, false, {
                 fileName: "first.js",
-                lineNumber: 9,
-                columnNumber: 13
+                lineNumber: 25,
+                columnNumber: 5
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "middle",
                 style: {
-                    textAlign: "center"
+                    display: "flex",
+                    flexWrap: "wrap",
+                    gap: "20px"
                 },
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                        children: "T-shirt"
-                    }, void 0, false, {
+                children: cardData.map((value, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardJsDefault.default), {
+                        cloth: value.cloth,
+                        discount: value.discount,
+                        img: value.img,
+                        price: value.price
+                    }, index, false, {
                         fileName: "first.js",
-                        lineNumber: 11,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        children: "40-60% off"
-                    }, void 0, false, {
-                        fileName: "first.js",
-                        lineNumber: 12,
-                        columnNumber: 17
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                        children: "SHOP NOW"
-                    }, void 0, false, {
-                        fileName: "first.js",
-                        lineNumber: 13,
-                        columnNumber: 17
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "first.js",
-                lineNumber: 10,
-                columnNumber: 13
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "first.js",
-        lineNumber: 8,
-        columnNumber: 9
-    }, this);
-}
-_c = Card;
-function App() {
-    return(//header
-    //body
-    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        style: {
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "20px"
-        },
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Card, {}, void 0, false, {
-                fileName: "first.js",
-                lineNumber: 24,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Card, {}, void 0, false, {
-                fileName: "first.js",
-                lineNumber: 25,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Card, {}, void 0, false, {
-                fileName: "first.js",
-                lineNumber: 26,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Card, {}, void 0, false, {
-                fileName: "first.js",
-                lineNumber: 27,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Card, {}, void 0, false, {
-                fileName: "first.js",
-                lineNumber: 28,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Card, {}, void 0, false, {
+                        lineNumber: 31,
+                        columnNumber: 38
+                    }, this))
+            }, void 0, false, {
                 fileName: "first.js",
                 lineNumber: 29,
-                columnNumber: 13
+                columnNumber: 5
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Card, {}, void 0, false, {
-                fileName: "first.js",
-                lineNumber: 30,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Card, {}, void 0, false, {
-                fileName: "first.js",
-                lineNumber: 31,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Card, {}, void 0, false, {
-                fileName: "first.js",
-                lineNumber: 32,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Card, {}, void 0, false, {
-                fileName: "first.js",
-                lineNumber: 33,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Card, {}, void 0, false, {
-                fileName: "first.js",
-                lineNumber: 34,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Card, {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
                 fileName: "first.js",
                 lineNumber: 35,
-                columnNumber: 13
+                columnNumber: 5
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Card, {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: (0, _footerJsDefault.default)()
+            }, void 0, false, {
                 fileName: "first.js",
-                lineNumber: 36,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Card, {}, void 0, false, {
-                fileName: "first.js",
-                lineNumber: 37,
-                columnNumber: 13
+                lineNumber: 38,
+                columnNumber: 5
             }, this)
         ]
-    }, void 0, true, {
-        fileName: "first.js",
-        lineNumber: 23,
-        columnNumber: 9
-    }, this));
+    }, void 0, true);
 }
-_c1 = App;
+_s(App, "QUdy/22ctkrEo8S6G5skOsfKg6w=");
+_c = App;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
     fileName: "first.js",
-    lineNumber: 42,
+    lineNumber: 47,
     columnNumber: 13
 }, undefined));
-var _c, _c1;
-$RefreshReg$(_c, "Card");
-$RefreshReg$(_c1, "App");
+var _c;
+$RefreshReg$(_c, "App");
 
   $parcel$ReactRefreshHelpers$ca57.postlude(module);
 } finally {
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-dom/client":"hrvwu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"dVPUn":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","react-dom/client":"hrvwu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./components/data.js":"9vMZ4","./components/card.js":"iIi4t","./components/header.js":"eQcnt","./components/footer.js":"2Lrsb"}],"dVPUn":[function(require,module,exports,__globalThis) {
 'use strict';
 module.exports = require("ee51401569654d91");
 
@@ -18549,6 +18476,347 @@ function $da9882e673ac146b$var$ErrorOverlay() {
     return null;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["1SKAT","4a2rT"], "4a2rT", "parcelRequire233b", {}, null, null, "http://localhost:1234")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"9vMZ4":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const arr = [
+    {
+        cloth: "Shirt",
+        discount: "60% OFF",
+        price: "\u20B91,200",
+        img: "https://cdn.pixabay.com/photo/2015/01/24/13/49/shirts-610170_1280.jpg"
+    },
+    {
+        cloth: "T-Shirt",
+        discount: "30% OFF",
+        price: "\u20B9800",
+        img: "https://cdn.pixabay.com/photo/2024/02/06/18/10/ai-generated-8557635_1280.jpg"
+    },
+    {
+        cloth: "Jeans",
+        discount: "50% OFF",
+        price: "\u20B92,000",
+        img: "https://cdn-images.farfetch-contents.com/18/95/43/42/18954342_42177909_1000.jpg"
+    },
+    {
+        cloth: "Jacket",
+        discount: "25% OFF",
+        price: "\u20B93,500",
+        img: "https://m.media-amazon.com/images/I/71Wbn0u1sQL._AC_SL1500_.jpg"
+    },
+    {
+        cloth: "Sweater",
+        discount: "60% OFF",
+        price: "\u20B91,500",
+        img: "https://www.bfgcdn.com/1500_1500_90/005-4271-0211/patagonia-recycled-wool-cable-knit-crewneck-sweater-jumper.jpg"
+    },
+    {
+        cloth: "Kurta",
+        discount: "35% OFF",
+        price: "\u20B9900",
+        img: "https://i.pinimg.com/originals/7c/53/f2/7c53f2d86f3a0bdc24a56c46a13725e6.png"
+    },
+    {
+        cloth: "Hoodie",
+        discount: "45% OFF",
+        price: "\u20B91,800",
+        img: "https://s3-eu-west-1.amazonaws.com/images.linnlive.com/4026ef0cc7c4844b9d335306aa30fe5c/7652964c-7af0-4490-a581-6c1ac72f9b77.jpg"
+    },
+    {
+        cloth: "Shorts",
+        discount: "20% OFF",
+        price: "\u20B9700",
+        img: "https://cdna.lystit.com/photos/farfetch/11567600-BLUE-f8f4b122-.jpeg"
+    },
+    {
+        cloth: "Track Pants",
+        discount: "55% OFF",
+        price: "\u20B91,600",
+        img: "https://www.flatspot.com/cdn/shop/products/nike-sb-rugged-track-pants-black-1_1300x1500_crop_center.progressive.jpg?v=1674750948"
+    },
+    {
+        cloth: "Blazer",
+        discount: "40% OFF",
+        price: "\u20B94,200",
+        img: "https://photos.edwardsgarment.com/HighRes/3500_010.jpg"
+    }
+];
+exports.default = arr;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"iIi4t":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$6268 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$6268.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$6268.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+function Card(props) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "card",
+        style: {
+            border: "2px solid green",
+            padding: "2px",
+            marginLeft: "5px"
+        },
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "cloth",
+                //src="https://www.pngkey.com/png/full/72-723644_blank-black-t-shirt-png.png"
+                src: props.img,
+                height: "200px",
+                width: "calc(20% - 20px)"
+            }, void 0, false, {
+                fileName: "components/card.js",
+                lineNumber: 4,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                style: {
+                    textAlign: "center"
+                },
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        children: props.cloth
+                    }, void 0, false, {
+                        fileName: "components/card.js",
+                        lineNumber: 11,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        children: props.discount
+                    }, void 0, false, {
+                        fileName: "components/card.js",
+                        lineNumber: 12,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        style: {
+                            marginBottom: "5px"
+                        },
+                        children: props.price
+                    }, void 0, false, {
+                        fileName: "components/card.js",
+                        lineNumber: 13,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        children: "SHOP NOW"
+                    }, void 0, false, {
+                        fileName: "components/card.js",
+                        lineNumber: 14,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "components/card.js",
+                lineNumber: 10,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/card.js",
+        lineNumber: 3,
+        columnNumber: 5
+    }, this);
+}
+_c = Card;
+exports.default = Card;
+var _c;
+$RefreshReg$(_c, "Card");
+
+  $parcel$ReactRefreshHelpers$6268.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"eQcnt":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$046d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$046d.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$046d.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+function Header({ sortByPrice }) {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "header",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "image",
+                src: "https://aartisto.com/wp-content/uploads/2020/11/myntra-1200x900.png",
+                height: "80px",
+                width: "80px"
+            }, void 0, false, {
+                fileName: "components/header.js",
+                lineNumber: 5,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "sections",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "but",
+                        children: "Men"
+                    }, void 0, false, {
+                        fileName: "components/header.js",
+                        lineNumber: 7,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "but",
+                        children: "Women"
+                    }, void 0, false, {
+                        fileName: "components/header.js",
+                        lineNumber: 8,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "but",
+                        children: "Kids"
+                    }, void 0, false, {
+                        fileName: "components/header.js",
+                        lineNumber: 9,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "but",
+                        children: "Home"
+                    }, void 0, false, {
+                        fileName: "components/header.js",
+                        lineNumber: 10,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "but",
+                        children: "Beauty"
+                    }, void 0, false, {
+                        fileName: "components/header.js",
+                        lineNumber: 11,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "but",
+                        children: "Genz"
+                    }, void 0, false, {
+                        fileName: "components/header.js",
+                        lineNumber: 12,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "but",
+                        id: "sort",
+                        onClick: sortByPrice,
+                        children: "Sort by price"
+                    }, void 0, false, {
+                        fileName: "components/header.js",
+                        lineNumber: 13,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "components/header.js",
+                lineNumber: 6,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                className: "searchbar",
+                type: "text",
+                placeholder: "Search for products,brands and more"
+            }, void 0, false, {
+                fileName: "components/header.js",
+                lineNumber: 15,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "profile",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "but1",
+                        children: "Profile"
+                    }, void 0, false, {
+                        fileName: "components/header.js",
+                        lineNumber: 17,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "but1",
+                        children: "Wishlist"
+                    }, void 0, false, {
+                        fileName: "components/header.js",
+                        lineNumber: 18,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "but1",
+                        children: "Bag"
+                    }, void 0, false, {
+                        fileName: "components/header.js",
+                        lineNumber: 19,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "components/header.js",
+                lineNumber: 16,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/header.js",
+        lineNumber: 4,
+        columnNumber: 5
+    }, this);
+}
+_c = Header;
+exports.default = Header;
+var _c;
+$RefreshReg$(_c, "Header");
+
+  $parcel$ReactRefreshHelpers$046d.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"2Lrsb":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$cb58 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$cb58.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$cb58.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+function Footer() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+        className: "botimg",
+        height: "200px",
+        width: "100%",
+        src: "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/5/13/e34b394c-36b1-4774-8639-5aeb2c5716121652442642122-DK-TSHIRT-67--1-.gif"
+    }, void 0, false, {
+        fileName: "components/footer.js",
+        lineNumber: 4,
+        columnNumber: 3
+    }, this);
+}
+_c = Footer;
+exports.default = Footer;
+var _c;
+$RefreshReg$(_c, "Footer");
+
+  $parcel$ReactRefreshHelpers$cb58.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}]},["1SKAT","4a2rT"], "4a2rT", "parcelRequire233b", {}, null, null, "http://localhost:1234")
 
 //# sourceMappingURL=myntra.552b6f6e.js.map

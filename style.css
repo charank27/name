@@ -14,6 +14,8 @@ body {
     background-color: white;
     border-bottom: 1px solid #e5e5e5;
     box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    
+    z-index: 1000;
 }
 
 /* Logo */
@@ -96,5 +98,25 @@ body {
     font-weight: bold;
     transition: color 0.3s;
   
+}
+.middle{
+    background-color: rgb(246,246,241);
+    padding-left: 50px;
+    padding-right:50px ;
+    padding-top: 50px;
+    justify-content: center;
+}
+.card{
+    background-color: #282c3f;;
+    height: 410px;
+    width:200px;
+    color: white;
+}
+.cloth{
+    height: 200px;
+    width:200px;
+}
+.botimg{
+    margin-top: 10px;
 }
 
